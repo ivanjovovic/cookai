@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefAI</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="background-animation"></div>
+  <div class="container">
+    <h1>🍴 ChefAI by Jocka 🍳</h1>
+    <div>
+      <h3><i class="fa-solid fa-egg"></i> Izaberite sastojke:</h3>
+      <label><input type="checkbox" value="jaja"> Jaja</label>
+      <label><input type="checkbox" value="brašno"> Brašno</label>
+      <label><input type="checkbox" value="mleko"> Mleko</label>
+      <label><input type="checkbox" value="šećer"> Šećer</label>
+      <textarea id="ingredients" placeholder="Unesi dodatne sastojke, odvojene zarezom..."></textarea>
+    </div>
+    <div>
+      <h3><i class="fa-solid fa-utensils"></i> Izaberite opremu za kuvanje:</h3>
+      <label><input type="checkbox" value="šerpa"> Šerpa</label>
+      <label><input type="checkbox" value="tiganj"> Tiganj</label>
+      <label><input type="checkbox" value="mikser"> Mikser</label>
+    </div>
+    <div>
+      <h3><i class="fa-solid fa-users"></i> Broj osoba:</h3>
+      <input type="number" id="servings" value="1" min="1">
+    </div>
+    <button id="generateBtn"><i class="fa-solid fa-magic"></i> Generiši Recept</button>
+    <div id="recipeOutputContainer">
+      <div id="recipeOutput"></div>
+      <button id="regenerateBtn" style="display: none;"><i class="fa-solid fa-redo"></i> Generiši Novi Recept</button>
+      <button id="downloadBtn" style="display: none;"><i class="fa-solid fa-download"></i> Preuzmi PDF</button>
+    </div>
+    <div id="rating">
+      <h3>Ocijenite recept:</h3>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+  </div>
+  <script src="static/script.js"></script>
+</body>
+</html>
