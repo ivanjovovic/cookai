@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import openai
+import os
 
 # Postavi OpenAI API ključ
 openai.api_key = "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"
@@ -45,4 +46,5 @@ def home():
 
 # Pokretanje aplikacije
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use PORT environment variable or default to 5000
+    app.run(host='0.0.0.0', port=port, debug=True)
